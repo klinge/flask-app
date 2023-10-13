@@ -3,14 +3,15 @@ updates:
 - package-ecosystem: "github-actions"
   directory: "/"
   schedule:
-    interval: weekly
+    interval: monthly
     day: "monday"
     time: "16:00"
     timezone: "UTC"
 - package-ecosystem: pip
   directory: "/"
   schedule:
-    interval: daily
+    interval: monthly
+    day: "tuesday"
     time: "13:00"
   groups:
     python-packages:
