@@ -6,7 +6,9 @@
     {% else %}
     <h1>Hi, unknown user!</h1>
     {% endif %}
+    <hr/>
+    <h3>Recent posts</h3>
     {% for post in posts %}
-    <div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>
+        {% include '_post.html' %}
     {% endfor %}
 {% endblock %}
