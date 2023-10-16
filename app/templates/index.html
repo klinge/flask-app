@@ -1,14 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-    {% if current_user.username %}
+{% if current_user.username %}
     <h1>Hi, {{ current_user.username.capitalize() }}!</h1>
-    {% else %}
-    <h1>Hi, unknown user!</h1>
-    {% endif %}
-    <hr/>
+    <hr />
     <h3>Recent posts</h3>
     {% for post in posts %}
-        {% include '_post.html' %}
-    {% endfor %}
+    {% include '_post.html' %}
+{% endfor %}
+{% else %}
+    <hr />
+    <h3>Recent posts</h3>
+    <h1>Hi, unknown user!</h1>
+{% endif %}
 {% endblock %}
