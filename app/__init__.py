@@ -24,7 +24,11 @@ mail = Mail(app)
 bootstrap = Bootstrap5(app)
 moment = Moment(app)
 
-from app import routes, models, errors
+##: BLUEPRINTS
+from app.errors import bp as errors_bp
+app.register_blueprint(errors_bp)
+
+from app import routes, models
 
 # setup logging of errors
 if not app.debug:
