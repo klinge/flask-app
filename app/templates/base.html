@@ -67,6 +67,11 @@
         {% block scripts %}
         <!-- Optional JavaScript -->
         {{ bootstrap.load_js() }}
+        {{ moment.include_moment() }}
+        <script src="{{ url_for('static', filename='js/site.js') }}"></script>
+        <script>
+            moment.locale(getNavigatorLanguage())
+        </script>
         {% endblock %}
     </div>
     </div>
